@@ -1,0 +1,66 @@
+{{!< default}}
+
+{{!-- custom Styles For tag <body> --}}
+{{#contentFor "mapache_class_body"}}is-frontpage {{^is "paged"}}has-cover is-transparency{{/is}}{{/contentFor}}
+{{#contentFor "mapache_class_site_main"}}pb4 {{/contentFor}}
+
+{{^is "paged"}}
+{{!-- Cover - partials/home/home-personal-cover.hbs --}}
+{{> "home/home-personal-cover"}}
+{{!-- {{> "home/home-description"}} --}}
+{{/is}}
+
+{{!-- Main --}}
+{{!-- <div id="main-content" class="extreme-container u-marginTop20"> --}}
+<div id="main-content" class="">
+
+    {{#page}}
+    {{content}}
+    {{/page}}
+
+    {{#get "posts"}}
+
+    <div class="h-cover home-banner u-marginAuto u-marginBottom30 u-clear">
+
+        {{#foreach posts visibility="all" from="2" to="4"}}
+        {{!-- Home Top Section -> 3 first Articles - partials/story/story-cover.hbs --}}
+        {{> "story/story-cover" }}
+        {{/foreach}}
+
+    </div>
+
+
+    {{!-- Post Grid - 8 lates article --}}
+    <div class="extreme-container home-story-grid">
+        <div class="row u-marginBottom40">
+
+            {{#foreach posts visibility="all" from="1" to="4"}}
+            <div class="col col-s12 s6 m4 l3">
+                {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
+                {{> "story/story-grid" class='u-fontSize20'}}
+            </div>
+            {{/foreach}}
+
+        </div>
+    </div>
+
+    {{!-- Post List - 4 latest articles --}}
+    <div class="extreme-container">
+        <div class="row">
+            <div class="col col-left story-feed">
+                <div class="story-feed-content">
+
+                    {{#foreach posts visibility="all" from="1" to="4"}}
+                    {{!-- Story List - partials/story/story-list.hbs --}}
+                    {{> "story/story-list"}}
+                    {{/foreach}}
+
+                </div>
+            </div>
+            {{!-- Sidebar - partials/sidebar.hbs --}}
+            {{> "sidebar"}}
+        </div>
+    </div>
+    {{/get}}
+
+</div>
