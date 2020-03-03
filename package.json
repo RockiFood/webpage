@@ -1,39 +1,35 @@
 {
-  "name": "mapache-godofredoninja",
-  "description": "mapache theme for ghost by @GodoFredoNinja",
-  "demo": "https://godofredo.ninja",
-  "version": "3.1.1",
+  "name": "rockifood",
+  "description": "RockiFood webpage theme",
+  "demo": "https://rockifood.com",
+  "version": "1.0.1",
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v3"
   },
   "license": "gpl-3.0",
   "author": {
-    "name": "GodoFredoNinja",
-    "email": "hello@godofredo.ninja",
-    "url": "https://godofredo.ninja"
+    "name": "Sebastian Tabares",
+    "email": "sy@tabares.me",
+    "url": "https://sy.tabares.me"
   },
   "gpm": {
     "type": "theme",
     "categories": [
-      "Minimal",
-      "Magazine",
+      "Webpage",
+      "Startup",
       "Blog"
     ]
   },
   "keywords": [
-    "ghost",
+    "webpage",
+    "startup",
     "theme",
-    "ghost-theme",
-    "GodoFredoNinja"
+    "ghost-theme"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/godofredoninja/mapache"
-  },
-  "bugs": {
-    "url": "https://github.com/godofredoninja/mapache/issues",
-    "email": "hello@godofredo.ninja"
+    "url": "https://github.com/RockiFood/webpage"
   },
   "config": {
     "posts_per_page": 15,
